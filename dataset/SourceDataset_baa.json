@@ -1,0 +1,47 @@
+{
+	"name": "SourceDataset_baa",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FtpServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "FtpServerLocation",
+				"fileName": "Pitags_kau.json"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"event": {
+					"type": "object",
+					"properties": {
+						"origin": {
+							"type": "string"
+						},
+						"payload- =OG02220 not found pressure in 20200610 listing": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"pitag": {
+										"type": "string"
+									},
+									"value": {
+										"type": "integer"
+									},
+									"timestamp": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
