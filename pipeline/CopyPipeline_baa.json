@@ -1,0 +1,106 @@
+{
+	"name": "CopyPipeline_baa",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_baa",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "/Pitags_kau.json"
+					},
+					{
+						"name": "Destination",
+						"value": "augustdemocontainer//test_json_pitags_kau"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "FtpReadSettings",
+							"recursive": true,
+							"useBinaryTransfer": true
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['event']['origin']"
+								},
+								"sink": {
+									"name": "origin"
+								}
+							},
+							{
+								"source": {
+									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][0]['pitag']"
+								},
+								"sink": {
+									"name": "pitag"
+								}
+							},
+							{
+								"source": {
+									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][0]['value']"
+								},
+								"sink": {
+									"name": "value",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][0]['timestamp']"
+								},
+								"sink": {
+									"name": "timestamp"
+								}
+							}
+						],
+						"collectionReference": ""
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_baa",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_baa",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
