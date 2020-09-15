@@ -52,27 +52,11 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['event']['origin']"
-								},
-								"sink": {
-									"name": "origin"
-								}
-							},
-							{
-								"source": {
-									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][0]['pitag']"
-								},
-								"sink": {
-									"name": "pitag"
-								}
-							},
-							{
-								"source": {
 									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][0]['value']"
 								},
 								"sink": {
 									"name": "value",
-									"type": "Decimal"
+									"type": "String"
 								}
 							},
 							{
@@ -80,7 +64,44 @@
 									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][0]['timestamp']"
 								},
 								"sink": {
-									"name": "timestamp"
+									"name": "timestamp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][0]['pitag']"
+								},
+								"sink": {
+									"name": "pitag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][1]['value']"
+								},
+								"sink": {
+									"name": "value",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][1]['timestamp']"
+								},
+								"sink": {
+									"name": "timestamp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][1]['pitag']"
+								},
+								"sink": {
+									"name": "pitag",
+									"type": "String"
 								}
 							}
 						],
