@@ -199,7 +199,8 @@
 											"path": "$['event']['origin']"
 										},
 										"sink": {
-											"name": "origin"
+											"name": "origin",
+											"type": "String"
 										}
 									},
 									{
@@ -207,7 +208,8 @@
 											"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][0]['pitag']"
 										},
 										"sink": {
-											"name": "pitag"
+											"name": "pitag",
+											"type": "String"
 										}
 									},
 									{
@@ -216,7 +218,7 @@
 										},
 										"sink": {
 											"name": "value",
-											"type": "Decimal"
+											"type": "String"
 										}
 									},
 									{
@@ -224,7 +226,8 @@
 											"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][0]['timestamp']"
 										},
 										"sink": {
-											"name": "timestamp"
+											"name": "timestamp",
+											"type": "String"
 										}
 									}
 								],
