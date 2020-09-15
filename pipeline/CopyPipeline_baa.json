@@ -85,15 +85,6 @@
 									"name": "timestamp",
 									"type": "String"
 								}
-							},
-							{
-								"source": {
-									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][1]['pitag']"
-								},
-								"sink": {
-									"name": "pitag",
-									"type": "String"
-								}
 							}
 						],
 						"collectionReference": ""
