@@ -85,6 +85,33 @@
 									"name": "timestamp",
 									"type": "String"
 								}
+							},
+							{
+								"source": {
+									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][1]['pitag']"
+								},
+								"sink": {
+									"name": "pitag2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][1]['value']"
+								},
+								"sink": {
+									"name": "value2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['event']['payload- =OG02220 not found pressure in 20200610 listing'][1]['timestamp']"
+								},
+								"sink": {
+									"name": "timestamp2",
+									"type": "String"
+								}
 							}
 						],
 						"collectionReference": "",
