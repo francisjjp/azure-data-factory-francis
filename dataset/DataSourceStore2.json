@@ -7,6 +7,9 @@
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "GoogleBigQueryObject"
+		"type": "GoogleBigQueryObject",
+		"typeProperties": {
+			"tableName": "`datasetexampleroche1`.`datatableroche1`"
+		}
 	}
 }
