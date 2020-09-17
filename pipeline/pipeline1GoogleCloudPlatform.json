@@ -25,11 +25,49 @@
 							"type": "JsonReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "AzureBlobFSSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['pitag']"
+								},
+								"sink": {
+									"path": "$['pitag']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['value']"
+								},
+								"sink": {
+									"path": "$['value']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['timestamp']"
+								},
+								"sink": {
+									"path": "$['timestamp']"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "Json1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DataDestinationStore2",
 						"type": "DatasetReference"
 					}
 				]
