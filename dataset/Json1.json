@@ -1,0 +1,33 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "GoogleCloudStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "GoogleCloudStorageLocation",
+				"bucketName": "segmentofrancis1",
+				"folderPath": "FTP",
+				"fileName": "Pitags_kau3.json"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pitag": {
+					"type": "string"
+				},
+				"value": {
+					"type": "integer"
+				},
+				"timestamp": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
