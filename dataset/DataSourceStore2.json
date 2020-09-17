@@ -1,0 +1,12 @@
+{
+	"name": "DataSourceStore2",
+	"properties": {
+		"description": "Connection to your Google BigQuery store.",
+		"linkedServiceName": {
+			"referenceName": "GoogleBigQuery1_Francis",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "GoogleBigQueryObject"
+	}
+}
